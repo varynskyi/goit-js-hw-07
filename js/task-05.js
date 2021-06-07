@@ -2,7 +2,7 @@ let nameInput = document.getElementById("name-input");
 let nameOutput = document.getElementById("name-output");
 
 function addText() {
-    if (nameInput.value === ' ') {
+    if (nameInput.value.trim() === '') {
        nameOutput.innerHTML = 'незнакомец';
     } else{
     nameOutput.innerHTML = nameInput.value;
