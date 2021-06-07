@@ -13,8 +13,11 @@ const images = [
   },
 ];
 const galleryRef = document.querySelector('#gallery');
+ 
+let item = [];
 images.forEach(image => {
-  galleryRef.insertAdjacentHTML('afterbegin', `<li><img src= ${image.url} alt= '${image.alt}' width= 480, height =360></li>`
+  item.push(`<li><img src= ${image.url} alt= '${image.alt}' width= 480, height =360></li>`
   );
 });
+galleryRef.insertAdjacentHTML('afterbegin', [...item].join(''));
   galleryRef.setAttribute("style", "list-style-type:none; display: flex;");
